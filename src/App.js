@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Customerdetails from "./Customerdetails";
+import Accountinput from "./Accountinput";
+import { useState } from "react";
+import Datastore from "./Datastore";
 
 function App() {
+  const [url, setUrl] = useState('');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Accountinput setUrl={setUrl}/>
+      <Datastore url={url}/>
+      {/* <Customerdetails /> */}
+      <h1>Hello Universe</h1>
     </div>
-  );
-}
+  )
+};
 
 export default App;
