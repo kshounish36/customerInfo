@@ -22,11 +22,8 @@ const Datastore = ({url}) => {
     function avatar(str) {
         return str.subString(0,1);
     }
-    //const API_URL = "https://api.nationalize.io/";
-    //const URL = API_URL.concat(data);
-    //const API_URL = "https://api.nationalize.io/?name=nathaniel";
-    
-    const [customers, setCustomer] = useState(null);
+
+    const [customer, setCustomer] = useState(null);
 
     useEffect(() => {
         axios.get(url)
@@ -35,13 +32,13 @@ const Datastore = ({url}) => {
             })
     }, [url])
 
-    if(customers) {
+    if(customer) {
         return (
             <Card sx={{ maxWidth: 345, backgroundColor: 'whitesmoke' }}>
                 <CardHeader
                     avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                       avatar({customers.country});
+                       avatar({customer.firstname});
                     </Avatar>
                     }
                     action={
@@ -49,11 +46,18 @@ const Datastore = ({url}) => {
                         <MoreVertIcon />
                     </IconButton>
                     }
-                    title={customers.country}
-                    subheader="September 14, 2016"
+                    title={customer.firstname}
+                    subheader={customer.signatureDate}
                 />
                 <div>
-                    <p>Customer Name: {customers.country}</p>
+                    <p>First Name: {customer.firstname}</p>
+                    <p>Last Name: {customer.surname}</p>
+                    <p>Steet: {customer.street}</p>
+                    <p>House No: {customer.billing_houseNumber}</p>
+                    <p>Phone: {customer.billing_phone}</p>
+                    <p>Meter Location: {customer.meterLocation}</p>
+                    <p>Market Location: {customer.marketLocation}</p>
+                    <p>Balance: {customer.balance}</p>
                 </div>
             </Card>
         )

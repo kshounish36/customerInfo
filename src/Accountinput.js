@@ -12,7 +12,7 @@ function Accountinput({setUrl}) {
   function getData(e) {
     setData(e.target.value)
   }
-  const API_URL = "https://api.zippopotam.us/us/";
+  const API_URL = "/api/";
   const URL = API_URL.concat(data);
 
   return (
