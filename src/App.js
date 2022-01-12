@@ -1,16 +1,18 @@
-import Customerdetails from "./Customerdetails";
 import Accountinput from "./Accountinput";
 import { useState } from "react";
 import Datastore from "./Datastore";
+import Appbar from "./Appbar";
+import SignInSide from "./Signin";
 
 function App() {
   const [url, setUrl] = useState('');
+  const [email, setEmail] = useState('');
   return (
     <div className="App">
-      <h1>Hello Customer 360!</h1>
+      <Appbar />
+      <SignInSide />
       <Accountinput setUrl={setUrl}/>
       <Datastore url={url}/>
-      {/* <Customerdetails /> */}
     </div>
   )
 };

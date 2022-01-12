@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Accountinput from './Accountinput';
+import Datastore from './Datastore';
+import Signin from './Signin';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <Routes>
+        {/* <Route path="/" element={<App />}/> */}
+        <Route path="/" element={<Signin />}/>
+        <Route path="/home" element={<Accountinput />}/>
+        <Route path="/customer" element={<Datastore />}/>
+      </Routes>
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
