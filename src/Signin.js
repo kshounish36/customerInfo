@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import swal from 'sweetalert';
 import { useState } from 'react';
 import LogInImage from './login.png';
+import { Outlet } from 'react-router-dom';
 
 function Copyright(props) {
   return (

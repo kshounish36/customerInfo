@@ -12,8 +12,7 @@ ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
       <Routes>
-        {/* <Route path="/" element={<App />}/> */}
-        <Route path="/" element={<Signin />}/>
+        <Route path="/" element={<App />}/>
         <Route path="/home" element={<Accountinput />}/>
         <Route path="/customer" element={<Datastore />}/>
       </Routes>
