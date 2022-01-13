@@ -83,13 +83,13 @@ const Datastore = () => {
                         <CardContent>
                         <div>
                             <Typography>First Name: {customer[0].firstname}</Typography>
-                            <p>Last Name: {customer[0].surname}</p>
-                            <p>Street: {customer[0].street}</p>
-                            <p>House No: {customer[0].houseNumber}</p>
-                            <p>Phone: {customer[0].phoneMobile}</p>
-                            <p>Meter Location: {customer[0].street}</p>
-                            <p>Market Location: {customer[0].city}</p>
-                            <p>Balance: {customer[0].accountBalance}</p>
+                            <Typography>Last Name: {customer[0].surname}</Typography>
+                            <Typography>Street: {customer[0].street}</Typography>
+                            <Typography>House No: {customer[0].houseNumber}</Typography>
+                            <Typography>Phone: {customer[0].phoneMobile}</Typography>
+                            <Typography>Meter Location: {customer[0].street}</Typography>
+                            <Typography>Market Location: {customer[0].city}</Typography>
+                            <Typography>Balance: {customer[0].accountBalance}</Typography>
                         </div>
                         </CardContent>
                     </Card>
