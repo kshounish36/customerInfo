@@ -33,7 +33,9 @@ function Copyright(props) {
 const theme = createTheme();
 
 async function loginUser(credentials) {
-    return fetch('https://www.mecallapi.com/api/login', {
+  //http://127.0.0.1:8000/api/customer/login
+  //https://www.mecallapi.com/api/login
+    return fetch('http://127.0.0.1:8000/api/customer/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

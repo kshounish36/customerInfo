@@ -17,7 +17,9 @@ function Accountinput() {
     setData(e.target.value)
   }
   const onMediaFallback = event => event.target.src = FALLBACK_IMAGE;
-  const API_URL = "https://api.zippopotam.us/us/";
+  //http://127.0.0.1:8000/customerDetails
+  //https://api.zippopotam.us/us/
+  const API_URL = "http://127.0.0.1:8000/customerDetails/";
   const URL = API_URL.concat(data);
 
   useEffect(() => {

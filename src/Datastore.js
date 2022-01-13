@@ -70,8 +70,8 @@ const Datastore = () => {
                                 <MoreVertIcon />
                             </IconButton>
                             }
-                            title={customer.firstname}
-                            subheader={customer.signatureDate}
+                            title={customer[0].firstname}
+                            subheader={customer[0].surname}
                         />
                         <CardMedia
                             component="img"
@@ -82,14 +82,14 @@ const Datastore = () => {
                         />
                         <CardContent>
                         <div>
-                            <Typography>First Name: {customer.firstname}</Typography>
-                            <p>Last Name: {customer.surname}</p>
-                            <p>Street: {customer.street}</p>
-                            <p>House No: {customer.billing_houseNumber}</p>
-                            <p>Phone: {customer.billing_phone}</p>
-                            <p>Meter Location: {customer.meterLocation}</p>
-                            <p>Market Location: {customer.marketLocation}</p>
-                            <p>Balance: {customer.balance}</p>
+                            <Typography>First Name: {customer[0].firstname}</Typography>
+                            <p>Last Name: {customer[0].surname}</p>
+                            <p>Street: {customer[0].street}</p>
+                            <p>House No: {customer[0].houseNumber}</p>
+                            <p>Phone: {customer[0].phoneMobile}</p>
+                            <p>Meter Location: {customer[0].street}</p>
+                            <p>Market Location: {customer[0].city}</p>
+                            <p>Balance: {customer[0].accountBalance}</p>
                         </div>
                         </CardContent>
                     </Card>
