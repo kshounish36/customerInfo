@@ -64,7 +64,7 @@ const Datastore = () => {
                 <SearchAppBar />
                 <Grid container spacing={2}>
                     <Grid item xs={6} md={4}>
-                        <Card sx={{ maxWidth: 400,  ml: 5, mt: 5, backgroundColor: '#56A5EC' }} variant="outlined">
+                        <Card sx={{ maxWidth: 450,  ml: 5, mt: 5, backgroundColor: '#56A5EC' }} variant="outlined">
                             <CardHeader
                                 avatar={
                                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -87,20 +87,36 @@ const Datastore = () => {
                             />
                             <CardContent>
                             <div>
-                                <Typography>First Name: {customer[0].firstname}</Typography>
+                                <table>
+                                    <tr><td><b>ACCOUNT ID</b></td><td>{customer[0].accountId}</td></tr>
+                                    <tr><td><b>MAIN CUSTOMER</b></td><td>{customer[0].firstname} {customer[0].surname}</td></tr>
+                                    <tr><td><b>SETUP DATE</b></td><td>{customer[0].SetupDate}</td></tr>
+                                    <tr><td><b>CIS DIVISION</b></td><td>{customer[0].city}</td></tr>
+                                    <tr><td><b>BILLING CYCLE</b></td><td>{customer[0].contractInvoiceCycleInterval} {customer[0].contractInvoiceCycleIntervalType}</td></tr>
+                                    <tr><td><b>BIRTH DATE</b></td><td>{customer[0].dateOfBirth}</td></tr>
+                                    <tr><td><b>HOME PHONE</b></td><td>{customer[0].phoneHome}</td></tr>
+                                    <tr><td><b>WORK PHONE</b></td><td>{customer[0].phoneBusiness}</td></tr>
+                                    <tr><td><b>CELL PHONE</b></td><td>{customer[0].phoneMobile}</td></tr>
+                                    <tr><td><b>EMAIL PRIVATE</b></td><td>{customer[0].emailPrivate}</td></tr>
+                                    <tr><td><b>METER LOCATION</b></td><td>{customer[0].street}</td></tr>
+                                    <tr><td><b>ADDRESS</b></td><td>{customer[0].houseNumber}, {customer[0].street}</td></tr>
+                                    <tr><td><b>MARKET LOCATION</b></td><td>{customer[0].city}</td></tr>
+                                    <tr><td><b>BALANCE</b></td><td>{customer[0].accountBalance}</td></tr>
+                                </table>
+                                {/* <Typography>First Name: {customer[0].firstname}</Typography>
                                 <Typography>Last Name: {customer[0].surname}</Typography>
                                 <Typography>Street: {customer[0].street}</Typography>
                                 <Typography>House No: {customer[0].houseNumber}</Typography>
                                 <Typography>Phone: {customer[0].phoneMobile}</Typography>
                                 <Typography>Meter Location: {customer[0].street}</Typography>
                                 <Typography>Market Location: {customer[0].city}</Typography>
-                                <Typography>Balance: {customer[0].accountBalance}</Typography>
+                                <Typography>Balance: {customer[0].accountBalance}</Typography> */}
                             </div>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs={6} md={4}>
-                        <Card sx={{ maxWidth: 400,  ml: 5, mt: 5, backgroundColor: '#56A5EC' }} variant="outlined">
+                        <Card sx={{ maxWidth: 600,  ml: 5, mt: 5, backgroundColor: '#56A5EC' }} variant="outlined">
                             <CardHeader
                                 avatar={
                                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
